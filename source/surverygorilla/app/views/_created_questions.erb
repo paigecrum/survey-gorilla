@@ -1,0 +1,9 @@
+<% Survey.find(session[:working_survey_id]).questions.each do |question| %>
+<%= question.question_text %><br>
+  <% question.responses.each do |resp| %>
+    &nbsp;&nbsp;&nbsp;<%= resp.choice_text %><br>
+  <% end %>
+<% end %>
+<div id="response_form">
+  <%= erb :_question_response %>
+</div>

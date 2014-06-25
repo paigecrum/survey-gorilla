@@ -1,0 +1,32 @@
+<div class="container">
+	<h1 class="main">Menu - SurveyGorilla</h1>
+
+	
+	<h4 class="menu_page_options">-- Create a survey --</h4>
+	<p>To build your own survey that anyone can take, <a href="/create">create</a> it here.</p><br>
+
+
+
+	<h4 class="menu_page_options">-- View your profile --</h4>
+	<p>To edit your <a href="/profile">profile</a> information and see all of the surveys you created.</p><br>
+
+
+
+	<h4 class="menu_page_options">-- Take a survey --</h4>
+	<p>To take a survey, enter the secure Survey ID number below:</p>
+	<form name="take_survey" action="/take" method="POST">
+	  <input type="number" name="survey_id" placeholder="Survey Number"><br>
+	  <input type="submit" value="Submit">
+	</form><br>
+
+
+
+	<h4 class="menu_page_options">-- See results of a survey --</h4>
+	<p>To view the current results of a survey, enter the secure Survey ID number below:</p>
+	<form name="results_survey" action="/results" method="POST">
+	  <input type="number" name="survey_id" placeholder="Survey Number"><br>
+	  <input type="submit" value="Submit">
+	</form>
+	
+
+</div>

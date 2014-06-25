@@ -1,0 +1,14 @@
+<div class="container">
+  <h2 class="main"><%= @survey.title.capitalize %></h2>
+  <% @survey_hash.each do |question, responses| %>
+    <li><%= question.question_text %></li>
+    <ol>
+        <% responses.each do |response| %>
+          <li><%= response.choice_text %>
+            -- <%= UserResponse.where(response_id: response.id).length %> vote(s)</li>
+      <% end %>
+    </ol>
+  <% end %>
+</div>
+
+

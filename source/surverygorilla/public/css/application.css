@@ -1,0 +1,110 @@
+body {
+	background-image: url('../congruent_outline.png');
+}
+
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px solid black;
+  background-image: url('../crossword.png');
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: 'Montserrat';
+}
+
+th {
+  text-align: left;
+
+}
+nav ul li {
+  display: inline;
+  list-style-type: none;
+  font-family: 'Montserrat';
+}
+
+nav {
+	padding-bottom: 18px;
+}
+
+#survey_title {
+  font-size: 2em;
+}
+
+.menu {
+	float: left;
+}
+
+.logout {
+  float: right;
+}
+
+label{
+  float: left;
+  width: 150px;
+}
+
+.errors {
+	color: red;
+	text-align: center;
+}
+
+input[type=submit] {
+  border-radius: 5px;
+  border: 0;
+  width: 120px;
+  height:25px;
+  background: #c0caca;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Montserrat';
+  padding: 2px;
+}
+
+input[type=submit]:hover {
+  background-color: #777777;
+}
+
+input {
+  margin: 1px;
+}
+
+fieldset {
+  width: 375px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #ffffff;
+}
+
+legend {
+  background-color: #2B2B2B;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 2px;
+}
+
+a {
+	color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #dd8f00;
+}
+
+.main {
+	text-align: center;
+}
+
+.menu_page_options {
+  font-family: 'Montserrat';
+}

@@ -1,0 +1,29 @@
+<div class="container">
+
+  <h3>Welcome <%= @user.first_name.capitalize %></h3>
+
+  <h3>Need to edit your information?</h3>
+  <form id="edit_profile" name="edit" action="/edit/<%=@user.id%>" method="POST">
+    <label>First Name:</label>
+    <input type="text" name="first_name" value="<%=@user.first_name%>"><br>
+    <label>Last Name:</label>
+    <input type="text" name="last_name" value="<%=@user.last_name%>"><br>
+    <input type="hidden" name="_method" value="PUT">
+    <input type="submit" value="Update!">
+  </form>
+
+  <h2>Your Surveys</h2>
+  <% if @user.created_surveys.length > 0 %>
+    <ol>
+      <% @user.created_surveys.each do |survey| %>
+        <li><a href="/results/<%=survey.id%>"><%=survey.title%></a></li>
+          <form id="delete_survey" name="delete_survey" action="/delete_survey/<%=survey.id%>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="submit" value="Delete">
+          </form>
+      <% end %>
+    <ol>
+    <% else %>
+      <p>You have not created any surveys!  Get started <a href="/create">here</a>.</p>
+    <% end %>
+</div>

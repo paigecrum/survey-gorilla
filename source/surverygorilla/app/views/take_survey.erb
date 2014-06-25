@@ -1,0 +1,13 @@
+<div class="container">
+	<h2 class="main"><%= @survey.title.capitalize %></h2>
+	<form action="/take/<%=@survey.id%>" method="post">
+		<ol>
+		<% @survey_hash.each do |question, responses| %>
+		  <li><%= question.question_text %></li><br>
+		  <% responses.each do |response| %>
+		      <input type="radio" name="qq_<%=question.id%>" value="<%= response.id %>">&nbsp;&nbsp;<%= response.choice_text %><br>
+		  <% end %><br>
+		<% end %>
+		<input type="submit" value = "Submit">
+	</form>
+</div>
